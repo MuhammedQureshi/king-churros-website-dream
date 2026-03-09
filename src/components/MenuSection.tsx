@@ -63,9 +63,11 @@ const MenuSection = () => {
           ))}
         </div>
 
-        <p className="text-center text-muted-foreground text-sm font-body mt-10 underline underline-offset-4 cursor-pointer hover:text-primary transition-colors">
-          See full menu →
-        </p>
+        <div className="text-center mt-10">
+          <a href="/menu" className="text-muted-foreground text-sm font-body underline underline-offset-4 hover:text-primary transition-colors">
+            See full menu →
+          </a>
+        </div>
       </div>
     </section>
   );

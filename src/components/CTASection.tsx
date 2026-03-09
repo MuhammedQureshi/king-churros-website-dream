@@ -1,17 +1,38 @@
+import { MapPin, Clock, Phone } from "lucide-react";
+
 const CTASection = () => {
   return (
     <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-          Find out which churro{" "}
-          <span className="text-gradient-gold">suits you best</span>
+      <div className="container mx-auto px-6">
+        <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
+          Visit <span className="text-gradient-gold">King Churros</span>
         </h2>
-        <p className="text-muted-foreground font-body mb-8 max-w-md mx-auto">
-          Take our quick quiz and discover your perfect churro match!
-        </p>
-        <button className="bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-body font-semibold text-sm hover:bg-gold-light transition-colors">
-          Take the Quiz
-        </button>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+          <div className="text-center space-y-3">
+            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+              <MapPin className="w-5 h-5 text-primary" />
+            </div>
+            <h3 className="font-display text-lg font-bold text-foreground">Location</h3>
+            <p className="text-muted-foreground text-sm font-body">123 Churro Avenue<br />Downtown, CA 90210</p>
+          </div>
+
+          <div className="text-center space-y-3">
+            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+              <Clock className="w-5 h-5 text-primary" />
+            </div>
+            <h3 className="font-display text-lg font-bold text-foreground">Hours</h3>
+            <p className="text-muted-foreground text-sm font-body">Mon–Fri: 9AM – 10PM<br />Sat–Sun: 10AM – 11PM</p>
+          </div>
+
+          <div className="text-center space-y-3">
+            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+              <Phone className="w-5 h-5 text-primary" />
+            </div>
+            <h3 className="font-display text-lg font-bold text-foreground">Contact</h3>
+            <p className="text-muted-foreground text-sm font-body">(555) 123-4567<br />hello@kingchurros.com</p>
+          </div>
+        </div>
       </div>
     </section>
   );
