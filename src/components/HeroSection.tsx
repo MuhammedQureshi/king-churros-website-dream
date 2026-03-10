@@ -24,7 +24,7 @@ const HeroSection = () => {
           <img
             src={churroHero}
             alt="Delicious golden churro"
-            className="w-72 md:w-96 animate-float drop-shadow-2xl"
+            className="w-[20rem] md:w-[30rem] animate-float drop-shadow-2xl"
           />
           <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-full" />
         </div>
