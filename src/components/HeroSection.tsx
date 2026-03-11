@@ -1,36 +1,65 @@
 import churroHero from "@/assets/churro-hero.png";
 
+import { motion } from "framer-motion";
+
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen bg-gradient-warm flex items-center pt-20 overflow-hidden">
-      <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-6 animate-fade-in-up">
-          <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight italic text-foreground">
-            Discover the{" "}
-            <span className="text-gradient-gold">perfect taste</span>{" "}
-            in every bite!
-          </h1>
-          <p className="text-muted-foreground text-lg font-body leading-relaxed max-w-lg">
-            Our churros aren't just a treat – they're an art form. 
-            Join us for a unique culinary journey where every bite 
-            is a meeting with perfect flavor.
-          </p>
-          <button className="bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-body font-semibold text-sm hover:bg-gold-light transition-colors">
-            Choose Your Churro
-          </button>
-        </div>
+    <section className="relative min-h-[100svh] flex items-center pt-16 pb-8 overflow-hidden">
+      <div className="absolute inset-0 gradient-dark" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(var(--gold)/0.08)_0%,_transparent_60%)]" />
 
-        <div className="relative flex justify-center">
-          <img
-            src={churroHero}
-            alt="Delicious golden churro"
-            className="w-[20rem] md:w-[30rem] animate-float drop-shadow-2xl"
-          />
-          <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-full" />
-        </div>
+      <div className="container relative z-10 flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-8 items-center">
+        {/* Image first on mobile for visual impact */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="relative flex justify-center order-first md:order-last"
+        >
+          <div className="relative w-full h-full sm:w-72 sm:h-72 lg:w-[28rem] lg:h-[28rem]">
+            <div className="absolute inset-0 rounded-full bg-gold/10 blur-3xl" />
+            <img
+              src={churroHero}
+              alt="Delicious King Churros with chocolate"
+              className="relative w-full h-full object-cover rounded-2xl md:rounded-3xl shadow-warm animate-float"
+            />
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-center md:text-left"
+        >
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight italic">
+            Discover the{" "}
+            <span className="text-gold">Royal Taste</span> in Every Bite!
+          </h1>
+          <p className="mt-4 md:mt-6 text-foreground/70 font-body text-sm md:text-lg max-w-lg mx-auto md:mx-0 leading-relaxed">
+            Our churros aren't just a treat — they're an experience. Freshly made, 
+            perfectly crispy, and drizzled with heavenly toppings.
+          </p>
+          <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center md:items-start">
+            <a
+              href="https://www.just-eat.co.uk/restaurants-king-churros"
+              target="_blank"
+              className="w-full sm:w-auto bg-gold font-body font-semibold px-8 py-3 rounded-full text-sm tracking-wide uppercase shadow-gold hover:opacity-90 transition-opacity text-center"
+            >
+              Order Now
+            </a>
+            <a
+              href="/menu"
+              className="w-full sm:w-auto border border-gold/40 text-gold font-body font-semibold px-8 py-3 rounded-full text-sm tracking-wide uppercase hover:bg-gold/10 transition-colors text-center"
+            >
+              View Menu
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
 export default HeroSection;
+
