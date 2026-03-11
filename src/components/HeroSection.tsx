@@ -17,7 +17,7 @@ const HeroSection = () => {
           className="relative flex justify-center order-first md:order-last"
         >
           <div className="relative w-full h-full sm:w-72 sm:h-72 lg:w-[28rem] lg:h-[28rem]">
-            <div className="absolute inset-0 rounded-full bg-gold/10 blur-3xl" />
+            <div className="absolute inset-0" />
             <img
               src={churroHero}
               alt="Delicious King Churros with chocolate"
