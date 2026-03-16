@@ -1,4 +1,4 @@
-import churroHero from "@/assets/churro-hero.png";
+import churroHero from "@/assets/churro-animation.png";
 
 import { motion } from "framer-motion";
 
